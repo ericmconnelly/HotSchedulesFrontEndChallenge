@@ -1,0 +1,69 @@
+$font-family: 'Roboto', arial, sans-seif;
+$font-color: #000000;
+$bg-color: #FFFFFF;
+$border-color: #E7E8E9;
+$bullet-color: #9BCA3C;
+
+body {
+  font-size: 62.5%;
+  font-family: $font-family;
+  font-color: $font-color;
+  background-color: $bg-color;
+  padding: 10px;
+}
+
+.container {
+  border: 2px solid #E7E8E9;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.header {
+  font-size: 16px;
+}
+
+.product-flex-container  {
+  height: 10vh;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  margin-left: 3rem;
+}
+
+.bullet-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.0rem;
+  width: 3.0rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #9BCA3C;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  margin-right: 3rem;
+}
+
+.product-info-container {
+  height: 10vh;
+  width: 95vw;
+  border-top: 2px solid #E7E8E9;
+}
+
+.name {
+  font-size: 14px;
+  padding-top: 18px;
+  padding-bottom: 10px;
+}
+
+.revenue {
+  font-size: 12px;
+}

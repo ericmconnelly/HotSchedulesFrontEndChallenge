@@ -90,7 +90,7 @@
             name: 'test-app',
             entry: './test-app/src/app.js',
             output: {
-                filename: './test-app/build/bundle.js',
+                filename: './public/build/bundle.js',
             },
             module: {
                 loaders: [
@@ -125,7 +125,48 @@
                 fs: 'empty',
                 tls: 'empty',
                 net: 'empty'
-            }
+            },
+        },
+        {
+            name: 'stylesheets',
+            entry: './src/stylesheets/top_sales.scss',
+            output: {
+                filename: './public/stylesheets/top_sales.css',
+            },
+            devtool: "source-map",
+            module: {
+                loaders: [
+                    {
+                        test: /\.scss$/,
+                        exclude: /node_modules/,
+                        use: [
+                            {
+                                loader: 'style-loader'  // creates style nodes from JS strings
+                            },
+                            {
+                                loader: 'css-loader',   // translates CSS into CommonJS
+                                options: {
+                                    modules: true,
+                                    localIdentName: 'echo-component-[name]-[hash:base64:5]',
+                                    sourceMap: true
+                                }
+                            },
+                            {
+                                loader: "sass-loader",   // compiles Sass to CSS
+                                options: {
+                                    sourceMap: true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            node: {
+                console: true,
+                fs: 'empty',
+                tls: 'empty',
+                net: 'empty'
+            },
         }
     ];
 
