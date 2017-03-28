@@ -4,18 +4,6 @@ import Styles from './../stylesheets/top_sales.scss';
 import {transformData, calculateRevenue, getTopTen} from '../utils/transformData';
 import { getSymbolFromCurrency } from 'currency-symbol-map'
 
-console.log('Styles', Styles)
-
-// export default TopSalesList;
-//write top sales list component here
-// class TopSalesList extends React.Component  {
-//     render() {
-//         return <div>TopSalesList Here</div>
-//     }
-// };
-
-// export default TopSalesList;
-
 export default class TopSalesList extends React.Component {
   constructor() {
     super();
@@ -30,7 +18,6 @@ export default class TopSalesList extends React.Component {
         const data = response.data
 
         let products = getTopTen(transformData(data))
-        console.log('products', products)
 
         this.setState({
           data: products
