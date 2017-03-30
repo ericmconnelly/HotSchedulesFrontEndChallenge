@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  border: 2px solid #E7E8E9;
+  border: 2px solid $border-color;
   padding: 5px;
   display: flex;
   flex-direction: column;
@@ -42,20 +42,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3.0rem;
-  width: 3.0rem;
+  height: 50px;
+  width: 50px;
   text-align: center;
   border-radius: 50%;
-  background-color: #9BCA3C;
-  color: #FFFFFF;
-  font-size: 1.4rem;
-  margin-right: 3rem;
+  background-color: $bullet-color;
+  color: $bg-color;
+  font-size: 17px;
+  margin-right: 20px;
 }
 
 .product_info_container {
   height: 10vh;
   width: 95vw;
-  border-top: 2px solid #E7E8E9;
+  border-top: 2px solid $border-color;
 }
 
 .product_name {
